@@ -1,0 +1,29 @@
+% SPDX-License-Identifier: CC-BY-SA-4.0
+% Session: Form parallelism to concurrency
+% Exercise: Amdahl's law
+
+\begingroup
+
+\begin{exercice}[La loi d'Amdahl]
+  \label{exo:introduction/amdahl}
+
+  Une proportion $p=70\,\%$ d'un programme séquentiel peut être parallélisée. On dispose d'une machine avec $n=10$~c\oe urs.
+
+  \begin{question} 
+  \item Quelle est l'accélération (speedup) attendue ?
+  \item On trouve dans le commerce une machine avec $n=20$~c\oe urs. Quelle est l'accélération attendue ?
+  \item Quelle est l'accélération maximale théorique lorsque $n \to \infty$ ?
+  \end{question}
+
+  Un ingénieur pense qu'il existe un moyen d'optimiser la partie séquentielle pour la rendre deux fois plus rapide.
+
+  \begin{question} 
+  \item Quelle proportion du programme est parallélisable dans la version otimisée ? 
+  \item Quelle accélération obtient-on alors, dans la parallélisation avec $n = 10$~c\oe urs ?
+  \item À coût égal, vaut-il mieux choisir d'acheter la machine avec $n=20$~c\oe urs ou payer l'ingénieur pour optimiser le code ? 
+  \end{question}
+  
+\end{exercice}
+
+\endgroup
+\endinput

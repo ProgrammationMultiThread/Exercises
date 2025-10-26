@@ -1,0 +1,35 @@
+% SPDX-License-Identifier: CC-BY-SA-4.0
+% Session: Form parallelism to concurrency
+% Exercise: Asynchrony
+
+\begingroup
+
+\begin{exercice}[Asynchronie]
+  \label{exo:introduction/asynchronous}
+
+  On se donne le programme multi-threads suivant : 
+
+  \begin{lstlisting}
+    Thread t = new Thread(() -> {
+      System.out.print("a");
+      new Thread(() -> { System.out.print("b"); }).start();
+      System.out.print("c");
+    });
+
+    System.out.print("d");
+    t.start();
+    System.out.print("e");
+    t.join();
+    System.out.print("f");
+  \end{lstlisting}
+
+  \begin{question}
+  \item Décrivez la relation ``happens-before'' du programme.
+  \item Décrivez toutes les sorties possibles pour le programme, en sachant qu'il est séquentiellement cohérent.
+  \item Décrivez la machine à états du programme.
+  \end{question}
+
+\end{exercice}
+
+\endgroup
+\endinput

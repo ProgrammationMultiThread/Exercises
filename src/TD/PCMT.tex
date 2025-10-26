@@ -1,0 +1,88 @@
+% SPDX-License-Identifier: CC-BY-SA-4.0
+
+\ifdefined\CORRECTION
+  \documentclass[livret, correction]{td}
+\else
+  \documentclass[livret]{td}
+\fi
+
+\usepackage{src/sty/config}
+
+\codeUE{XLG4IU020}
+
+\intituleUE[Programmation Concurrente en Multi-Threads]{Programmation Concurrente \\ en Multi-Threads}
+
+\author[Matthieu Perrin]{
+  Matthieu \textsc{Perrin}\\
+  Nantes Université\\
+  Laboratoire des Sciences du Numérique de Nantes \\
+  UMR CNRS 6004\\
+  Bureau 410, bâtiment 34 \\
+  \url{matthieu.perrin@univ-nantes.fr}\\
+}
+
+\institution{Nantes Université}
+
+\logo{src/img/logoUN.png}
+
+\cursus[M1 ALMA \& Smart Computing]{
+  \begin{tabular}[b]{l}
+    UFR Sciences et Techniques\\
+    Master en Informatique\\
+    Première année\\
+    Parcours ALMA \& Smart Computing\\
+  \end{tabular}
+}
+
+\typeTD
+
+\hypersetup{
+  pdftitle  = {Programmation Concurrente en Multi-Threads},
+  pdfauthor = {Matthieu Perrin},
+  pdfsubject  = {TD de M1 du cours Programmation Concurrente en Multi-Threads},
+  pdfkeywords = {concurrence, Java, modèle de mémoire, moniteur, parallélisme, sûreté, thread, verrou, vivacité}
+}
+
+\begin{document}
+
+\maketitlepage
+
+\session{Du parallélisme à la concurrence}
+\inputexercise{introduction/amdahl}
+\inputexercise{introduction/matrix}
+\inputexercise{introduction/asynchronous}
+\sessionappendix
+\inputexercise{introduction/mad}
+
+\session{Synchronisation par verrous}
+\inputexercise{blocking/philosophers}
+\inputexercise{blocking/bank}
+\inputexercise{blocking/pipeline}
+\sessionappendix
+\inputexercise{blocking/tree}
+
+\session{Moniteurs de synchronisation}
+\inputexercise{monitors/stack}
+\inputexercise{monitors/unisex}
+\inputexercise{monitors/threadpool}
+\sessionappendix
+\inputexercise{monitors/barrier}
+\inputexercise{monitors/savages}
+\inputexercise{monitors/go}
+
+\session{Le modèle mémoire de Java}
+\inputexercise{memory/volatile}
+\inputexercise{memory/singleton}
+\newpage
+\inputexercise{memory/datarace}
+
+\session{Algorithmes d'exclusion mutuelle}
+\inputexercise{locks/filter}
+\inputexercise{locks/reentrance}
+\inputexercise{locks/getAndIncrement}
+\sessionappendix
+\inputexercise{locks/readwrite}
+
+\end{document}
+
+\endinput

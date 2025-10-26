@@ -1,0 +1,30 @@
+% SPDX-License-Identifier: CC-BY-SA-4.0
+% Session: Form parallelism to concurrency
+% Exercise: Parallelization of matrix multiplication
+
+\begingroup
+
+\begin{exercice}[Parallélisation]
+  \label{exo:introduction/matrix}
+
+  Le but de cet exercice est d'écrire une fonction \lstinline{double[][] product(double[][] M1, double[][] M2)}
+  qui calcule le produit de deux matrices carrées $M_1$ et $M_2$ de taille $n\times n$.
+  On rappelle la définition de la multiplication des matrices. Si $M_3 = M_1 \times M_2$, alors pour tout
+  $i,j \in \{0,\dots,n-1\}$,
+  $$
+    M_3[i][j] = \sum_{k=0}^{n-1} M_1[i][k] \times M_2[k][j].
+  $$
+
+  \begin{question}
+    \item Implémentez la version séquentielle de \lstinline{product}.
+    \item Proposez une parallélisation où chaque cellule $M_3[i][j]$ est calculée par un thread distinct (jusqu'à $n^2$ threads). 
+    \item Proposez une version qui crée au plus $T$ threads ($T$ est une variable globale), chacun calculant un lot de cellules.
+      Précisez votre stratégie de répartition.
+    \item Analysez la complexité en temps des versions et justifiez l'intérêt
+          de limiter le nombre de threads à une borne indépendante de $n$.
+  \end{question}
+
+\end{exercice}
+
+\endgroup
+\endinput
