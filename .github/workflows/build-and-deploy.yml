@@ -31,7 +31,7 @@ jobs:
       - name: Build PDFs
         run: |
           make deps   # clone latex-libs if missing (no auto-update)
-          make        # produces docs/slides.pdf and docs/handout.pdf
+          make        # produces docs/td.pdf and docs/tp*.pdf
 
       # Prepare GitHub Pages artifact from docs/
       - name: Setup Pages
